@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: #222121;
+  color: #051f3c;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  height: 45px;
+  background: #f95738;
+  width: 100%;
+  color: #051f3c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 2px 5px 5px #111111b6;
+          box-shadow: 0px 2px 5px 5px #111111b6;
+  position: fixed;
+  top: 0;
+  z-index: 80;
+}
+
+.header :first-child {
+  color: #051f3c;
+  font-weight: 700;
+  font-size: 22px;
+  padding-left: 50px;
+}
+
+.header :last-child {
+  padding-right: 50px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.container {
+  padding: 150px 90px 90px 90px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[20];
+      grid-template-rows: repeat(20, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  grid-gap: 100px;
+  height: auto;
+}
+
+.card {
+  position: relative;
+  grid-row: span 5;
+  grid-column: span 2;
+  background: #272629;
+  -webkit-box-shadow: 0px 2px 5px 5px #111111e1;
+          box-shadow: 0px 2px 5px 5px #111111e1;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.card.square {
+  grid-row: span 4;
+}
+
+.card:last-child {
+  grid-column: span 4;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 2px 5px 15px 15px #111111d2;
+          box-shadow: 2px 5px 15px 15px #111111d2;
+}
+
+.card:hover .desc {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.img {
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.img.noel {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068619/mygallery/noel.jpg);
+}
+
+.img.drunk {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068755/mygallery/drunk.jpg);
+}
+
+.img.eat {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069309/mygallery/eat.jpg);
+}
+
+.img.fashion {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068629/mygallery/fashon.jpg);
+}
+
+.img.avril {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577102107/mygallery/t0eakj77gw3yodr4foi0.jpg);
+}
+
+.img.street {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069077/mygallery/streetart.jpg);
+}
+
+.img.paris {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068687/mygallery/paris.jpg);
+}
+
+.img.work {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068699/mygallery/ours.jpg);
+}
+
+.img.classe {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069064/mygallery/design.jpg);
+}
+
+.img.dogs {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068589/mygallery/singledog.jpg);
+}
+
+.img.singledog {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069162/mygallery/dogs.jpg);
+}
+
+.img.avila {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068546/mygallery/avila.jpg);
+}
+
+.img.hb {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068943/mygallery/hb.jpg);
+}
+
+.img.ps {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069044/mygallery/photoshop.jpg);
+}
+
+.img.flower {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068641/mygallery/flower.jpg);
+}
+
+.img.lbc {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068583/mygallery/boncoin.jpg);
+}
+
+.img.noodle {
+  background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068717/mygallery/noodle.jpg);
+}
+
+.desc {
+  background: #f95838a1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  bottom: 0px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 10px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.desc p {
+  font-size: 11px;
+}
+/*# sourceMappingURL=style.css.map */

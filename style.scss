@@ -1,0 +1,150 @@
+$blue: #051f3c;
+$white: #f2f2e3;
+$yellow: #f6db7b;
+$orange: rgb(238, 150, 75);
+$red: #f95738;
+
+body {
+	margin: 0;
+	width: 100vw;
+	min-height: 100vh;
+	background: rgb(34, 33, 33);
+	color: $blue;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+	height: 45px;
+	background: $red;
+	width: 100%;
+	color: $blue;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0px 2px 5px 5px #111111b6;
+	position: fixed;
+	top: 0;
+	z-index: 80;
+
+	& :first-child {
+		color: $blue;
+		font-weight: 700;
+		font-size: 22px;
+		padding-left: 50px;
+	}
+	& :last-child {
+		padding-right: 50px;
+		font-size: 12px;
+		font-weight: 100;
+	}
+}
+
+.container {
+	padding: 150px 90px 90px 90px;
+	display: grid;
+	grid-template-rows: repeat(20, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 100px;
+
+	height: auto;
+}
+
+.card {
+	position: relative;
+	grid-row: span 5;
+	grid-column: span 2;
+	background: rgb(39, 38, 41);
+	box-shadow: 0px 2px 5px 5px #111111e1;
+	transition: transform 0.5s;
+	&.square {
+		grid-row: span 4;
+	}
+	&:last-child {
+		grid-column: span 4;
+	}
+	&:hover {
+		transform: scale(1.2);
+		box-shadow: 2px 5px 15px 15px #111111d2;
+	}
+	&:hover .desc {
+		transform: scaleY(1);
+		transition: transform 0.3s;
+	}
+}
+
+.img {
+	height: 100%;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	&.noel {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068619/mygallery/noel.jpg);
+	}
+	&.drunk {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068755/mygallery/drunk.jpg);
+	}
+	&.eat {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069309/mygallery/eat.jpg);
+	}
+	&.fashion {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068629/mygallery/fashon.jpg);
+	}
+	&.avril {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577102107/mygallery/t0eakj77gw3yodr4foi0.jpg);
+	}
+	&.street {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069077/mygallery/streetart.jpg);
+	}
+	&.paris {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068687/mygallery/paris.jpg);
+	}
+	&.work {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068699/mygallery/ours.jpg);
+	}
+	&.classe {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069064/mygallery/design.jpg);
+	}
+	&.dogs {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068589/mygallery/singledog.jpg);
+	}
+	&.singledog {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069162/mygallery/dogs.jpg);
+	}
+	&.avila {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068546/mygallery/avila.jpg);
+	}
+	&.hb {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068943/mygallery/hb.jpg);
+	}
+	&.ps {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577069044/mygallery/photoshop.jpg);
+	}
+	&.flower {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068641/mygallery/flower.jpg);
+	}
+	&.lbc {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068583/mygallery/boncoin.jpg);
+	}
+	&.noodle {
+		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068717/mygallery/noodle.jpg);
+	}
+}
+
+.desc {
+	background: #f95838a1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	bottom: 0px;
+	width: fill;
+	font-size: 14px;
+	font-weight: 200;
+	padding: 10px;
+	transform: scaleY(0);
+
+	& p {
+		font-size: 11px;
+	}
+}
