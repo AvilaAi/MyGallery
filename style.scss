@@ -1,7 +1,7 @@
 $blue: #051f3c;
 $white: #f2f2e3;
-$yellow: #f6db7b;
-$orange: rgb(238, 150, 75);
+$yellow: #eecb2e;
+$orange: rgb(238, 200, 75);
 $red: #f95738;
 
 body {
@@ -14,8 +14,8 @@ body {
 }
 
 .header {
-	height: 45px;
-	background: $red;
+	height: 48px;
+	background: $yellow;
 	width: 100%;
 	color: $blue;
 	display: flex;
@@ -40,36 +40,65 @@ body {
 }
 
 .container {
-	padding: 150px 90px 90px 90px;
+	padding: 150px 110px 90px 110px;
 	display: grid;
-	grid-template-rows: repeat(20, 1fr);
-	grid-template-columns: repeat(6, 1fr);
-	grid-gap: 100px;
-
+	grid-template-rows: repeat(18, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 80px;
+	grid-row-gap: 100px;
 	height: auto;
 }
 
 .card {
 	position: relative;
-	grid-row: span 5;
-	grid-column: span 2;
+	grid-row: span 4;
+	grid-column: span 1;
 	background: rgb(39, 38, 41);
 	box-shadow: 0px 2px 5px 5px #111111e1;
 	transition: transform 0.5s;
 	&.square {
-		grid-row: span 4;
+		grid-row: span 3;
 	}
 	&:last-child {
-		grid-column: span 4;
+		grid-column: span 2;
 	}
 	&:hover {
-		transform: scale(1.2);
+		transform: scale(1.4);
 		box-shadow: 2px 5px 15px 15px #111111d2;
 	}
 	&:hover .desc {
-		transform: scaleY(1);
-		transition: transform 0.3s;
+		opacity: (1);
+		transition: opacity 0.3s;
 	}
+}
+
+.desc {
+	background: rgba(255, 208, 0, 0.575);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	bottom: 0px;
+	width: fill;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 10px;
+	opacity: (0);
+
+	& p {
+		font-size: 10px;
+		font-weight: 500;
+	}
+}
+
+.footer {
+	width: fill;
+	text-align: center;
+	margin: 40px;
+	font-weight: 200;
+	font-size: 12px;
+	color: #7f8fa6;
+	text-shadow: 1px 1px 2px black;
 }
 
 .img {
@@ -129,32 +158,4 @@ body {
 	&.noodle {
 		background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068717/mygallery/noodle.jpg);
 	}
-}
-
-.desc {
-	background: #f95838a1;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	position: absolute;
-	bottom: 0px;
-	width: fill;
-	font-size: 14px;
-	font-weight: 200;
-	padding: 10px;
-	transform: scaleY(0);
-
-	& p {
-		font-size: 11px;
-	}
-}
-
-.footer {
-	width: fill;
-	text-align: center;
-	margin: 40px;
-	font-weight: 200;
-	font-size: 12px;
-	color: #7f8fa6;
-	text-shadow: 1px 1px 2px black;
 }

@@ -8,8 +8,8 @@ body {
 }
 
 .header {
-  height: 45px;
-  background: #f95738;
+  height: 48px;
+  background: #eecb2e;
   width: 100%;
   color: #051f3c;
   display: -webkit-box;
@@ -42,21 +42,22 @@ body {
 }
 
 .container {
-  padding: 150px 90px 90px 90px;
+  padding: 150px 110px 90px 110px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[20];
-      grid-template-rows: repeat(20, 1fr);
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
-  grid-gap: 100px;
+  -ms-grid-rows: (1fr)[18];
+      grid-template-rows: repeat(18, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 80px;
+  grid-row-gap: 100px;
   height: auto;
 }
 
 .card {
   position: relative;
-  grid-row: span 5;
-  grid-column: span 2;
+  grid-row: span 4;
+  grid-column: span 1;
   background: #272629;
   -webkit-box-shadow: 0px 2px 5px 5px #111111e1;
           box-shadow: 0px 2px 5px 5px #111111e1;
@@ -67,27 +68,64 @@ body {
 }
 
 .card.square {
-  grid-row: span 4;
+  grid-row: span 3;
 }
 
 .card:last-child {
-  grid-column: span 4;
+  grid-column: span 2;
 }
 
 .card:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
   -webkit-box-shadow: 2px 5px 15px 15px #111111d2;
           box-shadow: 2px 5px 15px 15px #111111d2;
 }
 
 .card:hover .desc {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.desc {
+  background: rgba(255, 208, 0, 0.575);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  bottom: 0px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 10px;
+  opacity: 0;
+}
+
+.desc p {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.footer {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  text-align: center;
+  margin: 40px;
+  font-weight: 200;
+  font-size: 12px;
+  color: #7f8fa6;
+  text-shadow: 1px 1px 2px black;
 }
 
 .img {
@@ -163,45 +201,5 @@ body {
 
 .img.noodle {
   background-image: url(https://res.cloudinary.com/dg0flooxn/image/upload/v1577068717/mygallery/noodle.jpg);
-}
-
-.desc {
-  background: #f95838a1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: absolute;
-  bottom: 0px;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill;
-  font-size: 14px;
-  font-weight: 200;
-  padding: 10px;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-}
-
-.desc p {
-  font-size: 11px;
-}
-
-.footer {
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill;
-  text-align: center;
-  margin: 40px;
-  font-weight: 200;
-  font-size: 12px;
-  color: #7f8fa6;
-  text-shadow: 1px 1px 2px black;
 }
 /*# sourceMappingURL=style.css.map */
