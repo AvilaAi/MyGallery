@@ -1,3 +1,4 @@
 # MyGallery
+
 a simple, weird gallery
-https://avilaai.github.io./
+https://avilaai.github.io/MyGallery/
