@@ -5,11 +5,12 @@ body {
   background: #222121;
   color: #051f3c;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: default;
 }
 
 .header {
   height: 48px;
-  background: #eecb2e;
+  background: #eecb2edc;
   width: 100%;
   color: #051f3c;
   display: -webkit-box;
@@ -76,8 +77,8 @@ body {
 }
 
 .card:hover {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   -webkit-box-shadow: 2px 5px 15px 15px #111111d2;
           box-shadow: 2px 5px 15px 15px #111111d2;
 }
@@ -105,9 +106,10 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 600;
   padding: 10px;
+  padding-bottom: 0;
   opacity: 0;
 }
 

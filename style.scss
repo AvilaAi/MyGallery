@@ -1,8 +1,5 @@
 $blue: #051f3c;
-$white: #f2f2e3;
-$yellow: #eecb2e;
-$orange: rgb(238, 200, 75);
-$red: #f95738;
+$yellow: #eecb2edc;
 
 body {
 	margin: 0;
@@ -11,6 +8,7 @@ body {
 	background: rgb(34, 33, 33);
 	color: $blue;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	cursor: default;
 }
 
 .header {
@@ -63,7 +61,7 @@ body {
 		grid-column: span 2;
 	}
 	&:hover {
-		transform: scale(1.4);
+		transform: scale(1.3);
 		box-shadow: 2px 5px 15px 15px #111111d2;
 	}
 	&:hover .desc {
@@ -80,9 +78,10 @@ body {
 	position: absolute;
 	bottom: 0px;
 	width: fill;
-	font-size: 11px;
-	font-weight: 700;
+	font-size: 10px;
+	font-weight: 600;
 	padding: 10px;
+	padding-bottom: 0;
 	opacity: (0);
 
 	& p {
